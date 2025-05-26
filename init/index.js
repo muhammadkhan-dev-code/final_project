@@ -1,7 +1,6 @@
 const mongoose= require('mongoose');
 const init_data = require('./data');
 const Listing = require('../models/listing');
-
 //  setup database  connection 
 const MONGO_URL= 'mongodb://127.0.0.1:27017/wander_lust';
 main().then(()=>{
