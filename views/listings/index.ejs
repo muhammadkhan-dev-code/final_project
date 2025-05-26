@@ -1,0 +1,45 @@
+<% layout("/layouts/boilerplate") %>
+  <h2>All Lists</h2>
+  <div class="row  row-cols-lg-5 row-cols-md-3 row-cols-sm-2">
+    <% for (let listing of allListings) { %>
+    <div class="card col">
+      <a href="/listings/<%= listing._id%>" class="card-link">
+        <img
+          src="<%=listing.image %>"
+          class="card-img-top"
+          alt="listing_imag"
+        />
+        <div class="card-img-overlay">
+          <span class="text-span">Guest favorite</span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="35"
+              height="35"
+              viewBox="0 0 24 24"
+              fill="#B0B0B0"
+              stroke="#FFFFFF"
+              stroke-width="1.5"
+            >
+              <path
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+               2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 
+               4.5 2.09C13.09 3.81 14.76 3 16.5 3 
+               19.58 3 22 5.42 22 8.5c0 3.78-3.4 
+               6.86-8.55 11.54L12 21.35z"
+              />
+            </svg>
+          </span>
+        </div>
+        <div class="card-body">
+          <p class="card-text">
+            <b><%= listing.title %></b><br/>
+            &#8360;<%=listing.price%> for 2 nights
+            <br />
+          </p>
+        </div>
+      </a>
+    </div>
+    <% } %>
+  </div>
+
