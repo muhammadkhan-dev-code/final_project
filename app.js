@@ -78,18 +78,3 @@ console.log(`Server is Listening to  port 3000`);
 });
 
 
-//  test route
-// app.get("/testListeing",async(req,res)=>{
-//     let sampleListing= new Listing({
-//         title:"My Home",
-//         description:"BY The Beach ",
-//     price:1200,
-//     location:"Beach Karachi ",
-//     country:"pakistan"
-//     })
-//       await sampleListing.save();
-
-//       console.log("Sample Was Saved ..");
-//       res.send("Success Full testing");
-//      });
-
